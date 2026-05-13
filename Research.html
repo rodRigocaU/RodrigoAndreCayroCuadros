@@ -1,263 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Neural Network and Visualization</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
-    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700" rel="stylesheet">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Research — Andre Cayro</title>
+  <link rel="stylesheet" href="css/portfolio.css">
+  <style>
+    .pdf-embed { width:100%; height:580px; border:none; border-radius:var(--radius-lg); display:block; background:#000; }
+    .paper-section { background:var(--surface); border:1px solid var(--border); border-radius:var(--radius-lg); overflow:hidden; margin-bottom:2rem; }
+    .paper-section-header { padding:1.5rem 2rem; border-bottom:1px solid var(--border); }
+    .paper-section-body { padding:1.5rem 2rem 2rem; }
+    .paper-section-embed { padding:0 2rem 2rem; }
+  </style>
+</head>
+<body>
 
-    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
-    <link rel="stylesheet" href="css/animate.css">
-    
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="css/magnific-popup.css">
+<nav>
+  <a href="index.html" class="nav-logo">ANDRE<span>.</span></a>
+  <ul class="nav-links">
+    <li><a href="GameDev.html">Game Dev</a></li>
+    <li><a href="NN.html">ML &amp; Neural Nets</a></li>
+    <li><a href="Research.html" class="active">Research</a></li>
+  </ul>
+  <a href="mailto:rodrigo.cayro@usp.br" class="nav-cta">Hire Me</a>
+  <button class="nav-toggle" aria-label="Menu">☰</button>
+</nav>
 
-    <link rel="stylesheet" href="css/aos.css">
+<div class="section" style="padding-bottom:1.5rem">
+  <div class="section-header">
+    <h2>Research &amp; Publications</h2>
+    <div class="line"></div>
+  </div>
+  <p style="color:var(--muted);font-size:14px;max-width:620px">
+    Peer-reviewed work published at international conferences. Research focus: procedural terrain generation for games using GPU computing, neural style transfer, and evolutionary algorithms.
+  </p>
+</div>
 
-    <link rel="stylesheet" href="css/ionicons.min.css">
+<!-- PAPER 1: WiP 2025 -->
+<div class="section" style="padding-top:0;padding-bottom:0">
+  <div class="paper-section">
+    <div class="paper-section-header">
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:.75rem">
+        <span class="conf-badge">WiP 2025 · Salvador, Brazil</span>
+        <span class="conf-badge">Research Poster</span>
+      </div>
+      <h2 style="font-family:'Bebas Neue',sans-serif;font-size:26px;letter-spacing:.03em;line-height:1.15;margin-bottom:.5rem">
+        Terrain Generation using Neural Style Transfer and Fractal Brownian Motion Noise with Constraints
+      </h2>
+      <p style="color:var(--muted);font-size:13px">Simpósio Brasileiro de Games — Work in Progress Track, 2025</p>
+    </div>
+    <div class="paper-section-body">
+      <p style="color:var(--muted);font-size:14px;line-height:1.8;margin-bottom:1rem">
+        Hybrid terrain generation method combining neural style transfer with fractal noise (Fractal Brownian Motion) and user-defined constraints to produce realistic, visually controllable terrains for games and simulations. The system integrates a multi-criteria fitness function including NavMesh connectivity as a playability metric, validated across four terrain archetypes.
+      </p>
+      <div class="tech-tags" style="margin-bottom:1.25rem">
+        <span class="tech-tag">Neural Style Transfer</span>
+        <span class="tech-tag">Fractal Brownian Motion</span>
+        <span class="tech-tag">Genetic Algorithms</span>
+        <span class="tech-tag">Unity</span>
+        <span class="tech-tag">NavMesh</span>
+        <span class="tech-tag">GPU</span>
+        <span class="tech-tag">PyTorch</span>
+      </div>
+      <a href="papers/296.pdf" target="_blank" class="btn btn-accent" style="display:inline-flex">📄 Download PDF →</a>
+    </div>
+    <div class="paper-section-embed">
+      <iframe src="papers/296.pdf" class="pdf-embed" title="WiP 2025 paper"></iframe>
+    </div>
+  </div>
+</div>
 
-    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
-    <link rel="stylesheet" href="css/jquery.timepicker.css">
+<!-- PAPER 2: CSCI 2024 -->
+<div class="section" style="padding-top:0">
+  <div class="paper-section">
+    <div class="paper-section-header">
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:.75rem">
+        <span class="conf-badge">CSCI 2024 · Las Vegas, USA</span>
+        <span class="conf-badge">Conference Paper</span>
+      </div>
+      <h2 style="font-family:'Bebas Neue',sans-serif;font-size:26px;letter-spacing:.03em;line-height:1.15;margin-bottom:.5rem">
+        Simplified 3D Terrain Meshes using Poisson Disk Sampling and Perlin Noise on GPU
+      </h2>
+      <p style="color:var(--muted);font-size:13px">International Conference on Computational Science &amp; Computational Intelligence, 2024</p>
+    </div>
+    <div class="paper-section-body">
+      <p style="color:var(--muted);font-size:14px;line-height:1.8;margin-bottom:1rem">
+        GPU-accelerated terrain generation combining Poisson Disk Sampling for point distribution with Perlin Noise for height synthesis, producing simplified 3D terrain meshes with significantly reduced polygon complexity while maintaining visual quality. The approach leverages parallel GPU computation to achieve real-time generation speeds suitable for game engines.
+      </p>
+      <div class="tech-tags" style="margin-bottom:1.25rem">
+        <span class="tech-tag">Poisson Disk Sampling</span>
+        <span class="tech-tag">Perlin Noise</span>
+        <span class="tech-tag">GPU / CUDA</span>
+        <span class="tech-tag">C++</span>
+        <span class="tech-tag">OpenGL</span>
+        <span class="tech-tag">Mesh Simplification</span>
+        <span class="tech-tag">Real-Time Rendering</span>
+      </div>
+      <a href="papers/simply.pdf" target="_blank" class="btn btn-accent" style="display:inline-flex">📄 Download PDF →</a>
+    </div>
+    <div class="paper-section-embed">
+      <iframe src="papers/simply.pdf" class="pdf-embed" title="CSCI 2024 paper"></iframe>
+    </div>
+  </div>
+</div>
 
-    
-    <link rel="stylesheet" href="css/flaticon.css">
-    <link rel="stylesheet" href="css/icomoon.css">
-    <link rel="stylesheet" href="css/style.css">
-  </head>
-  <body>
+<footer>
+  <p>R. Andre Cayro Cuadros &nbsp;·&nbsp; <a href="mailto:rodrigo.cayro@usp.br">rodrigo.cayro@usp.br</a> &nbsp;·&nbsp; <a href="https://github.com/rodrigocau" target="_blank">GitHub</a></p>
+</footer>
 
-	<div id="colorlib-page">
-		<a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
-		<aside id="colorlib-aside" role="complementary" class="js-fullheight text-center">
-			<h1 id="colorlib-logo"><a href="index.html">Rodrigo Andre Cayro Cuadros<span>.</span></a></h1>
-			<nav id="colorlib-main-menu" role="navigation">
-				<ul>
-					<li><a href="index.html">Home</a></li>
-					<li><a href="NN.html">Neural Network and Visualization</a></li>
-					<li><a href="GameDev.html">Game Development and Graphics</a></li>
-					<li class="colorlib-active"><a href="Research.html">Research</a></li>
-				</ul>
-			</nav>
-
-			<div class="colorlib-footer">
-				<p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-			 This template is made by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-				<ul>
-					<li><a href="#"><i class="icon-facebook"></i></a></li>
-					<li><a href="#"><i class="icon-twitter"></i></a></li>
-					<li><a href="#"><i class="icon-instagram"></i></a></li>
-					<li><a href="#"><i class="icon-linkedin"></i></a></li>
-				</ul>
-			</div>
-		</aside> <!-- END COLORLIB-ASIDE -->
-		<div id="colorlib-main">
-			<section class="home-slider js-fullheight owl-carousel">
-	      <div class="slider-item js-fullheight" style="background-image:url(images/terrain.png);">
-	      	<div class="overlay"></div>
-	        <div class="container-fluid">
-	          <div class="row no-gutters slider-text slider-text-2 js-fullheight align-items-center justify-content-center" data-scrollax-parent="true">
-	          <div class="col-md-10 text-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
-	            <h1 class="mb-4" style="color: #1352d8" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Terrain Generation</h1>
-	            <p style="color: #1352d8" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Unity, GPU, Opimization, GA, Style Transfer</p>
-	          </div>
-	        </div>
-	        </div>
-	      </div>
-
-	     
-	    </section>
-			<section class="ftco-section">
-	    	<div class="container">
-	    		<div class="row">
-	    			<div class="col-lg-8">
-	    				<div class="row">
-	    					<div class="col-md-12">
-	    						<div class="blog-entry ftco-animate">
-	    							<div class="video-wrapper">
-				
-										 <iframe
-											src="papers/296.pdf"
-											width="100%"
-											height="600px"
-											style="border: none;">
-										</iframe>
-
-										</div>
-	    							<div class="text pt-2 mt-3">
-					          	<span class="category mb-1 d-block"><a href="#">Terrain Generation</a></span>
-				              <h3 class="mb-4"><a href="#">Terrain Generation using Neural Transfer Style and Fractal Brownian Motion Noise with Constraints</a></h3>
-				              <p class="mb-4">
-Hybrid terrain generation method combining neural style transfer, fractal noise, and user-defined constraints to produce realistic and controllable terrains for games and simulations.
-<br><br>
-<strong>Accepted and presented</strong> as a <strong>research paper and poster</strong> at <strong>WiP 2025 Conference</strong>:
-<em>“Terrain Generation using Neural Transfer Style and Fractal Brownian Motion Noise with Constraints”.</em>
-</p>
-				              <div class="author mb-4 d-flex align-items-center">
-				            		<a href="#" class="img" style="background-image: url(images/fortnite.jpg);"></a>
-				            	</div>
-				              <div class="meta-wrap d-md-flex align-items-center">
-				              	
-				              </div>
-				            </div>
-	    						</div>
-	    					</div>
-
-							<div class="col-md-12">
-	    						<div class="blog-entry ftco-animate">
-	    							<div class="video-wrapper">
-				
-										 <iframe
-											src="papers/simply.pdf"
-											width="100%"
-											height="600px"
-											style="border: none;">
-										</iframe>
-
-										</div>
-	    							<div class="text pt-2 mt-3">
-					          	<span class="category mb-1 d-block"><a href="#">Terrain Simplification</a></span>
-				              <h3 class="mb-4"><a href="#">Simplified 3D Terrain Meshes using Poisson Disk Sampling and Perlin Noise on GPU</a></h3>
-				              <p class="mb-4">
-GPU-based terrain generation method combining Poisson Disk Sampling and Perlin Noise to produce simplified, scalable 3D terrains with significantly reduced mesh complexity.
-<br><br>
-<strong>Accepted paper</strong> at the <strong>CSCI 2024 Conference</strong>:
-<em>“Simplified 3D Terrain Meshes using Poisson Disk Sampling and Perlin Noise on GPU”.</em>
-</p>
-<div class="author mb-4 d-flex align-items-center">
-				            		<a href="#" class="img" style="background-image: url(images/fortnite.jpg);"></a>
-				            	</div>
-				              <div class="meta-wrap d-md-flex align-items-center">
-				              	
-				              </div>
-				            </div>
-	    						</div>
-	    					</div>
-
-
-
-	    					
-
-	    					
-
-	    					
-
-	    					
-	    				</div>
-	    				<div class="row mt-5">
-			          <div class="col">
-			            
-			          </div>
-			        </div>
-	    			</div><!-- END-->
-	    			<div class="col-lg-4 sidebar ftco-animate">
-	            
-	           
-
-	            
-
-	            <div class="sidebar-box ftco-animate">
-	              <h3 class="sidebar-heading">Tag Cloud</h3>
-	              <ul class="tagcloud">
-	               <a href="#" class="tag-cloud-link">Procedural Content Generation</a>
-					<a href="#" class="tag-cloud-link">Terrain Generation</a>
-					<a href="#" class="tag-cloud-link">3D Graphics</a>
-					<a href="#" class="tag-cloud-link">GPU Computing</a>
-					<a href="#" class="tag-cloud-link">Parallel Processing</a>
-					<a href="#" class="tag-cloud-link">Poisson Disk Sampling</a>
-					<a href="#" class="tag-cloud-link">Perlin Noise</a>
-					<a href="#" class="tag-cloud-link">Mesh Simplification</a>
-					<a href="#" class="tag-cloud-link">Real-Time Rendering</a>
-					<a href="#" class="tag-cloud-link">Game Engines</a>
-					<a href="#" class="tag-cloud-link">Procedural Terrain</a>
-					<a href="#" class="tag-cloud-link">Computer Graphics</a>
-					<a href="#" class="tag-cloud-link">Scientific Computing</a>
-					<a href="#" class="tag-cloud-link">GPU Acceleration</a>
-	              </ul>
-	            </div>
-
-				
-
-	           
-
-
-	            
-	          </div><!-- END COL -->
-	    		</div>
-	    	</div>
-	    </section>
-	    <footer class="ftco-footer ftco-bg-dark ftco-section">
-      <div class="container px-md-5">
-        <div class="row mb-5">
-          <div class="col-md">
-            <div class="ftco-footer-widget mb-4 ml-md-4">
-              <!--<h2 class="ftco-heading-2">Category</h2>
-              <ul class="list-unstyled categories">
-                <!--<li><a href="#">Photography <span>(6)</span></a></li>-->
-                <!--<li><a href="#">Fashion <span>(8)</span></a></li>
-                <li><a href="#">Technology <span>(2)</span></a></li>
-                <li><a href="#">Travel <span>(2)</span></a></li>
-              </ul>
-            </div>
-          </div>-->
-          <div class="col-md">
-             <div class="ftco-footer-widget mb-4">
-              <h2 class="ftco-heading-2">Archives</h2>
-              <ul class="list-unstyled categories">
-              	<li><a href="#">Neural Network and Visualization </a></li>
-                <li><a href="#">Game Development and Graphics</a></li>
-                <li><a href="#">Research</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-md">
-            <div class="ftco-footer-widget mb-4">
-            	<h2 class="ftco-heading-2">Have a Questions?</h2>
-            	<div class="block-23 mb-3">
-	              <ul>
-	                <li><span class="icon icon-map-marker"></span><span class="text">Arequipa, Arequipa, Peru </span></li>
-	                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">rodrigo.cayro@ucsp.edu.pe / rodrigo.cayro@usp.br </span></a></li>
-	              </ul>
-	            </div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-12">
-
-            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
- This template is made with by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
-          </div>
-	        </div>
-	      </div>
-	    </footer>
-		</div><!-- END COLORLIB-MAIN -->
-	</div><!-- END COLORLIB-PAGE -->
-
-  <!-- loader -->
-  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
-
-
-  <script src="js/jquery.min.js"></script>
-  <script src="js/jquery-migrate-3.0.1.min.js"></script>
-  <script src="js/popper.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/jquery.easing.1.3.js"></script>
-  <script src="js/jquery.waypoints.min.js"></script>
-  <script src="js/jquery.stellar.min.js"></script>
-  <script src="js/owl.carousel.min.js"></script>
-  <script src="js/jquery.magnific-popup.min.js"></script>
-  <script src="js/aos.js"></script>
-  <script src="js/jquery.animateNumber.min.js"></script>
-  <script src="js/bootstrap-datepicker.js"></script>
-  <script src="js/jquery.timepicker.min.js"></script>
-  <script src="js/scrollax.min.js"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
-  <script src="js/google-map.js"></script>
-  <script src="js/main.js"></script>
-    
-  </body>
+</body>
 </html>

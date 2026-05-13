@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ovi Obstacle Assault — Andre Cayro</title>
+  <link rel="stylesheet" href="../css/portfolio.css">
+<style>
+.proj-thumb-hero{position:relative;max-width:900px;margin:0 auto 3rem;padding:0 2rem}
+.proj-thumb-hero a{display:block;position:relative;border-radius:14px;overflow:hidden;cursor:pointer}
+.proj-thumb-hero img{width:100%;max-height:460px;object-fit:cover;display:block}
+.proj-thumb-hero .play{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:64px;height:64px;background:rgba(0,0,0,.72);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:26px;color:#fff;transition:background .2s}
+.proj-thumb-hero a:hover .play{background:var(--accent);color:#000}
+.proj-thumb-hero .eng{position:absolute;top:12px;right:12px;font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:500;background:rgba(0,0,0,.75);color:#f0f0f0;padding:3px 10px;border-radius:99px;border:1px solid rgba(255,255,255,.2)}
+</style>
+<style>
+.pth{position:relative;max-width:900px;margin:0 auto 3rem;padding:0 2rem}
+.pth a{display:block;position:relative;border-radius:14px;overflow:hidden}
+.pth img{width:100%;max-height:460px;object-fit:cover;display:block}
+.pth .pl{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:64px;height:64px;background:rgba(0,0,0,.72);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:26px;color:#fff;transition:background .2s;pointer-events:none}
+.pth a:hover .pl{background:var(--accent);color:#000}
+.pth .eb{position:absolute;top:12px;right:12px;font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:500;background:rgba(0,0,0,.75);color:#f0f0f0;padding:3px 10px;border-radius:99px;border:1px solid rgba(255,255,255,.2)}
+</style>
+</head>
+<body>
+<nav><a href="../index.html" class="nav-logo">ANDRE<span>.</span></a><ul class="nav-links"><li><a href="../GameDev.html" class="active">Game Dev</a></li><li><a href="../NN.html">ML &amp; Neural Nets</a></li><li><a href="../Research.html">Research</a></li></ul><a href="mailto:rodrigo.cayro@usp.br" class="nav-cta">Hire Me</a></nav>
+<div class="detail-hero">
+  <a href="../GameDev.html" class="back-link">← Back to Projects</a>
+  <div class="detail-badges"><span class="conf-badge">UE5 · C++</span><span class="conf-badge">Movement Systems</span></div>
+  <h1 class="detail-title">Ovi Obstacle Assault — Obby</h1>
+  <p class="detail-subtitle">A 3D obstacle course built in Unreal Engine 5 C++ where the player must climb through a gauntlet of moving platforms, testing timing and spatial reasoning.</p>
+  <div class="detail-links"><a href="https://www.youtube.com/watch?v=q9ukWJTsvGQ" target="_blank" class="btn btn-accent">▶ Watch Demo</a></div>
+</div>
+
+<span class="yt-engine-badge">UE5 · C++</span>
+  </a>
+</div>
+
+
+<div class="pth">
+  <a href="https://www.youtube.com/watch?v=q9ukWJTsvGQ" target="_blank" rel="noopener">
+    <img src="https://img.youtube.com/vi/q9ukWJTsvGQ/hqdefault.jpg" alt="Ovi Obstacle Assault">
+    <div class="pl">&#9654;</div>
+  </a>
+</div>
+
+<div class="detail-body">
+  <div class="detail-main">
+    <h3>Overview</h3>
+    <p>Ovi Obstacle Assault is an obstacle course (obby) game in which the player must climb as high as possible through a series of moving platforms. Every platform has independent motion — some oscillate horizontally, others spin, and others move in complex patterns.</p>
+    <h3>Core Systems</h3>
+    <ul>
+      <li>Platform offset and looping timer system — each platform has configurable motion range, speed, and phase</li>
+      <li>Transform manipulation via C++ — position and rotation updated each tick using UE5's component system</li>
+      <li>Movement interpolation using FMath::VInterpTo for smooth platform transitions</li>
+      <li>C++ pointer-based architecture for platform actor management</li>
+      <li>Player respawn on fall with checkpoint system</li>
+    </ul>
+    <h3>What I Learned</h3>
+    <p>This project deepened my understanding of UE5's tick-based update loop, and how to drive smooth physical motion through code rather than Blueprint visual scripting. Working with C++ pointers and UE5's actor component model in a real-time context was the key learning outcome.</p>
+  </div>
+  <div class="detail-sidebar">
+    <div class="sidebar-card"><div class="sidebar-label">Tech Stack</div><div class="sidebar-items"><span class="tech-tag">Unreal Engine 5</span><span class="tech-tag">C++</span><span class="tech-tag">Transform Manipulation</span><span class="tech-tag">FMath Interpolation</span><span class="tech-tag">Actor Components</span></div></div>
+    <div class="sidebar-card"><div class="sidebar-label">Category</div><div class="sidebar-items"><span class="tech-tag">Movement Systems</span><span class="tech-tag">UE5</span><span class="tech-tag">C++ Architecture</span></div></div>
+  </div>
+</div>
+<footer><p>R. Andre Cayro Cuadros &nbsp;·&nbsp; <a href="mailto:rodrigo.cayro@usp.br">rodrigo.cayro@usp.br</a></p></footer>
+</body>
+</html>

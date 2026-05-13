@@ -1,319 +1,177 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Game Development and Graphics</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
-    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700" rel="stylesheet">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Game Dev Projects — Andre Cayro</title>
+  <link rel="stylesheet" href="css/portfolio.css">
+</head>
+<body>
 
-    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
-    <link rel="stylesheet" href="css/animate.css">
-    
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="css/magnific-popup.css">
+<nav>
+  <a href="index.html" class="nav-logo">ANDRE<span>.</span></a>
+  <ul class="nav-links">
+    <li><a href="GameDev.html" class="active">Game Dev</a></li>
+    <li><a href="NN.html">ML &amp; Neural Nets</a></li>
+    <li><a href="Research.html">Research</a></li>
+  </ul>
+  <a href="mailto:rodrigo.cayro@usp.br" class="nav-cta">Hire Me</a>
+  <button class="nav-toggle" aria-label="Menu">☰</button>
+</nav>
 
-    <link rel="stylesheet" href="css/aos.css">
+<div class="section" style="padding-bottom:1rem">
+  <div class="section-header">
+    <h2>Game Dev &amp; Graphics</h2>
+    <div class="line"></div>
+  </div>
+  <p style="color:var(--muted);font-size:14px;margin-bottom:2rem;max-width:620px">
+    Projects spanning gameplay systems, AI programming, procedural generation and real-time graphics — built with C++, Unreal Engine 5, Unity, and OpenGL.
+  </p>
+  <div class="proj-filters">
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="ue5">UE5 · C++</button>
+    <button class="filter-btn" data-filter="unity">Unity</button>
+    <button class="filter-btn" data-filter="opengl">OpenGL</button>
+    <button class="filter-btn" data-filter="ai">AI / CV</button>
+  </div>
+</div>
 
-    <link rel="stylesheet" href="css/ionicons.min.css">
+<div class="section" style="padding-top:0">
+  <div class="proj-grid">
 
-    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
-    <link rel="stylesheet" href="css/jquery.timepicker.css">
-
-    
-    <link rel="stylesheet" href="css/flaticon.css">
-    <link rel="stylesheet" href="css/icomoon.css">
-    <link rel="stylesheet" href="css/style.css">
-
-    <style>
-      .video-wrapper video {
-        width: 100%;
-        height: 400px;
-        object-fit: cover;
-        border-radius: 4px;
-        background: #111;
-      }
-    </style>
-  </head>
-  <body>
-
-	<div id="colorlib-page">
-		<a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
-		<aside id="colorlib-aside" role="complementary" class="js-fullheight text-center">
-			<h1 id="colorlib-logo"><a href="index.html">Rodrigo Andre Cayro Cuadros<span>.</span></a></h1>
-			<nav id="colorlib-main-menu" role="navigation">
-				<ul>
-					<li><a href="index.html">Home</a></li>
-					<li><a href="NN.html">Neural Network and Visualization</a></li>
-					<li class="colorlib-active"><a href="GameDev.html">Game Development and Graphics</a></li>
-					<li><a href="Research.html">Research</a></li>
-				</ul>
-			</nav>
-
-			<div class="colorlib-footer">
-				<p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-			 This template is made by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-				<ul>
-					<li><a href="#"><i class="icon-facebook"></i></a></li>
-					<li><a href="#"><i class="icon-twitter"></i></a></li>
-					<li><a href="#"><i class="icon-instagram"></i></a></li>
-					<li><a href="#"><i class="icon-linkedin"></i></a></li>
-				</ul>
-			</div>
-		</aside> <!-- END COLORLIB-ASIDE -->
-		<div id="colorlib-main">
-			<section class="home-slider js-fullheight owl-carousel">
-	      <div class="slider-item js-fullheight" style="background-image:url(images/opengl.png);">
-	      	<div class="overlay"></div>
-	        <div class="container-fluid">
-	          <div class="row no-gutters slider-text slider-text-2 js-fullheight align-items-center justify-content-center" data-scrollax-parent="true">
-	          <div class="col-md-10 text-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
-	            <h1 class="mb-4" style="color: #f5d76e" properties: { translateY: '30%', opacity: 1.6 }">GameDev</h1>
-	            <p style="color: #f5d76e" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Unity, Unreal Engine, C#, C++, OpenGL, GLSL</p>
-	          </div>
-	        </div>
-	        </div>
-	      </div>
-	    </section>
-
-		<section class="ftco-section">
-    	<div class="container">
-    		<div class="row">
-    			<div class="col-lg-8">
-    				<div class="row">
-
-    					<!-- =============================================
-    					     UNREAL ENGINE: OVI OBSTACLE ASSAULT
-    					     ============================================= -->
-
-						<!-- UNREAL ENGINE: TANK BATTLE -->
-						<div class="col-md-12">
-							<div class="blog-entry ftco-animate">
-								<div class="video-wrapper" style="position:relative; cursor:pointer;"
-									onclick="window.open('https://youtu.be/U8hdBk27op0','_blank')">
-									<img src="https://img.youtube.com/vi/U8hdBk27op0/maxresdefault.jpg"
-										style="width:100%; height:400px; object-fit:cover;">
-									<div style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);
-												background:rgba(0,0,0,0.7); color:white; padding:15px 25px;
-												border-radius:5px; font-size:18px;">
-										▶ Watch on YouTube
-									</div>
-								</div>
-								<div class="text pt-2 mt-3">
-									<span class="category mb-1 d-block"><a href="#">Unreal Engine</a></span>
-									<h3 class="mb-4"><a href="#">Unreal Engine: Tank Battle C++</a></h3>
-									<p class="mb-4">A third-person 3D shooter developed in Unreal Engine, showcasing a broad set of gameplay systems including particle effects, spatial audio, multi-enemy AI, game modes, game instances, scoring, collision handling, and custom player controllers. The project also features a complete death and respawn system, level reset logic, and fine-tuned controller configurations tailored to the game's specific mechanics.</p>
-									<div class="meta-wrap d-md-flex align-items-center"></div>
-								</div>
-							</div>
-						</div>
-
-						<!-- UNREAL ENGINE: DUNGEON ESCAPE -->
-						<div class="col-md-12">
-							<div class="blog-entry ftco-animate">
-								<div class="video-wrapper" style="position:relative; cursor:pointer;"
-									onclick="window.open('https://youtu.be/UQnXwo2uUU0','_blank')">
-									<img src="https://img.youtube.com/vi/UQnXwo2uUU0/maxresdefault.jpg"
-										style="width:100%; height:400px; object-fit:cover;">
-									<div style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);
-												background:rgba(0,0,0,0.7); color:white; padding:15px 25px;
-												border-radius:5px; font-size:18px;">
-										▶ Watch on YouTube
-									</div>
-								</div>
-								<div class="text pt-2 mt-3">
-									<span class="category mb-1 d-block"><a href="#">Unreal Engine</a></span>
-									<h3 class="mb-4"><a href="#">Unreal Engine: Dungeon Escape C++</a></h3>
-									<p class="mb-4">A first-person dungeon puzzle game in which the player must explore the environment, collect multiple keys stored in a personal inventory, and place them at the correct locked barriers to progress. The core challenge lies in managing the inventory system and solving the key-placement sequence to ultimately reach the final pressure plate, which triggers the exit doors to open.</p>
-									<div class="meta-wrap d-md-flex align-items-center"></div>
-								</div>
-							</div>
-						</div>
-
-						<!-- UNREAL ENGINE: OVI OBSTACLE ASSAULT -->
-						<div class="col-md-12">
-							<div class="blog-entry ftco-animate">
-								<div class="video-wrapper" style="position:relative; cursor:pointer;"
-									onclick="window.open('https://youtu.be/q9ukWJTsvGQ','_blank')">
-									<img src="https://img.youtube.com/vi/q9ukWJTsvGQ/maxresdefault.jpg"
-										style="width:100%; height:400px; object-fit:cover;">
-									<div style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);
-												background:rgba(0,0,0,0.7); color:white; padding:15px 25px;
-												border-radius:5px; font-size:18px;">
-										▶ Watch on YouTube
-									</div>
-								</div>
-								<div class="text pt-2 mt-3">
-									<span class="category mb-1 d-block"><a href="#">Unreal Engine</a></span>
-									<h3 class="mb-4"><a href="#">Unreal Engine: Ovi Obstacle Assault C++</a></h3>
-									<p class="mb-4">A 3D obstacle course (obby) built in Unreal Engine where the player must climb as high as possible through a series of moving platforms. The project focuses on core timing and motion mechanics, including platform offset, looping timers, transform manipulation, and movement interpolation — all implemented using C++ pointers and Unreal's component system.</p>
-									<div class="meta-wrap d-md-flex align-items-center"></div>
-								</div>
-							</div>
-						</div>
-
-						<!-- OPENGL: RUBIK'S CUBE -->
-						<div class="col-md-12">
-							<div class="blog-entry ftco-animate">
-								<div class="video-wrapper" style="position:relative; cursor:pointer;"
-									onclick="window.open('https://youtu.be/CZ1buRS8c10','_blank')">
-									<img src="images/cube.png"
-										style="width:100%; height:400px; object-fit:cover;">
-									<div style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);
-												background:rgba(0,0,0,0.7); color:white; padding:15px 25px;
-												border-radius:5px; font-size:18px;">
-										▶ Watch on YouTube
-									</div>
-								</div>
-								<div class="text pt-2 mt-3">
-									<span class="category mb-1 d-block"><a href="#">Graphics Development</a></span>
-									<h3 class="mb-4"><a href="#">OpenGL - Rubik's Cube</a></h3>
-									<p class="mb-4">Interactive 3D Rubik's Cube developed for the Computer Graphics course at Universidad Católica San Pablo (Department of Computer Science). The project implements real-time 3D rendering and face rotations with keyboard controls, including camera navigation and animated effects (e.g., seismic/shake animation). It focuses on core graphics concepts such as transformations, orientation handling, and interactive input mapping.</p>
-									<div class="meta-wrap d-md-flex align-items-center"></div>
-								</div>
-							</div>
-						</div>
-
-						<!-- COLOR BUMP 3D -->
-						<div class="col-md-12">
-							<div class="blog-entry ftco-animate">
-								<div class="video-wrapper" style="position:relative; cursor:pointer;"
-									onclick="window.open('https://youtu.be/8zTxh4GByh4','_blank')">
-									<img src="images/IHC.png"
-										style="width:100%; height:400px; object-fit:cover;">
-									<div style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);
-												background:rgba(0,0,0,0.7); color:white; padding:15px 25px;
-												border-radius:5px; font-size:18px;">
-										▶ Watch on YouTube
-									</div>
-								</div>
-								<div class="text pt-2 mt-3">
-									<span class="category mb-1 d-block"><a href="#">Game Development</a></span>
-									<h3 class="mb-4"><a href="#">Unity: Color Bump 3D</a></h3>
-									<p class="mb-4">Multiplayer 3D game developed in Unity with real-time integration of Python and OpenCV for vision-based control. One player moves the ball using head orientation tracking, while the other controls its speed through hand gestures and audio input, demonstrating multimodal interaction and real-time system integration.</p>
-									<div class="meta-wrap d-md-flex align-items-center"></div>
-								</div>
-							</div>
-						</div>
-
-					<!-- =============================================
-					     OPERATION METAL LAB (original)
-					     ============================================= -->
-					<div class="col-md-12">
-    						<div class="blog-entry ftco-animate">
-    							<div class="video-wrapper">
-									<a href="#" class="img" style="background-image: url(images/itchio.png);"></a>
-									<a href="https://sirrogerinzz.itch.io/operation-metal-lab"
-										target="_blank"
-										rel="noopener"
-										class="btn btn-primary">
-										Play on itch.io
-									</a>
-								</div>
-    							<div class="text pt-2 mt-3">
-				          	<span class="category mb-1 d-block"><a href="#">Game Development</a></span>
-			              <h3 class="mb-4"><a href="#">Unity: Operation Metal Lab</a></h3>
-			              <p class="mb-4">Infiltrate a secretive laboratory and uncover the hidden experiments within. Navigate through tight corridors while avoiding enemies and security cameras, collecting keys to unlock new areas and advance deeper into the facility.
-Operation Metal Lab is a top-down tactical shooter with a limited field of view, challenging players to plan each move carefully. Eliminate enemies strategically, manage visibility, and progress through increasingly dangerous stages as you uncover the lab's secrets.</p>
-			              <div class="author mb-4 d-flex align-items-center">
-			            		<a href="#" class="img" style="background-image: url(images/fortnite.jpg);"></a>
-			            	</div>
-			              <div class="meta-wrap d-md-flex align-items-center"></div>
-			            </div>
-    					</div>
-    				</div>
-
-    				</div><!-- end inner row -->
-    				<div class="row mt-5">
-		          <div class="col"></div>
-		        </div>
-    			</div><!-- END col-lg-8 -->
-
-    			<div class="col-lg-4 sidebar ftco-animate">
-	            <div class="sidebar-box ftco-animate">
-	              <h3 class="sidebar-heading">Tag Cloud</h3>
-	              <ul class="tagcloud">
-	                  <a href="#" class="tag-cloud-link">Unreal Engine</a>
-	                  <a href="#" class="tag-cloud-link">C++</a>
-					  <a href="#" class="tag-cloud-link">Game Development</a>
-					  <a href="#" class="tag-cloud-link">Unity</a>
-					  <a href="#" class="tag-cloud-link">C#</a>
-					  <a href="#" class="tag-cloud-link">Indie Game</a>
-					  <a href="#" class="tag-cloud-link">Top-Down Shooter</a>
-					  <a href="#" class="tag-cloud-link">Tactical Gameplay</a>
-					  <a href="#" class="tag-cloud-link">Game AI</a>
-					  <a href="#" class="tag-cloud-link">Enemy AI</a>
-					  <a href="#" class="tag-cloud-link">Level Design</a>
-					  <a href="#" class="tag-cloud-link">Itch.io</a>
-					  <a href="#" class="tag-cloud-link">PC Game</a>
-					  <a href="#" class="tag-cloud-link">Action</a>
-					  <a href="#" class="tag-cloud-link">Indie Developer</a>
-	              </ul>
-	            </div>
-	          </div><!-- END COL -->
-
-    		</div><!-- end row -->
-    	</div><!-- end container -->
-    </section>
-
-    <footer class="ftco-footer ftco-bg-dark ftco-section">
-      <div class="container px-md-5">
-        <div class="row mb-5">
-          <div class="col-md">
-             <div class="ftco-footer-widget mb-4">
-              <h2 class="ftco-heading-2">Archives</h2>
-              <ul class="list-unstyled categories">
-              	<li><a href="#">Neural Network and Visualization </a></li>
-                <li><a href="#">Game Development and Graphics</a></li>
-                <li><a href="#">Research</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-md">
-            <div class="ftco-footer-widget mb-4">
-            	<h2 class="ftco-heading-2">Have a Questions?</h2>
-            	<div class="block-23 mb-3">
-	              <ul>
-	                <li><span class="icon icon-map-marker"></span><span class="text">Arequipa, Arequipa, Peru </span></li>
-	                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">rodrigo.cayro@ucsp.edu.pe / rodrigo.cayro@usp.br </span></a></li>
-	              </ul>
-	            </div>
-            </div>
-          </div>
+    <!-- 1. TANK BATTLE -->
+    <a href="projects/tank-battle.html" class="proj-card" data-tags="ue5">
+      <div class="proj-thumb">
+        <img src="https://img.youtube.com/vi/U8hdBk27op0/maxresdefault.jpg" alt="Tank Battle">
+        <span class="engine-badge">UE5 · C++</span>
+      </div>
+      <div class="proj-body">
+        <div class="proj-title">Tank Battle — Multi-Enemy AI</div>
+        <p class="proj-desc">3rd-person shooter with particle FX, spatial audio, multi-enemy AI, custom game modes, scoring, collision, death and respawn system. Fully in C++.</p>
+        <div class="tech-tags">
+          <span class="tech-tag">C++</span><span class="tech-tag">UE5</span><span class="tech-tag">NavMesh AI</span><span class="tech-tag">Game Modes</span>
         </div>
-        <div class="row">
-          <div class="col-md-12">
-            <p>This template is made with by <a href="https://colorlib.com" target="_blank">Colorlib</a></p>
-          </div>
-	      </div>
-	    </div>
-	  </footer>
+        <div class="proj-footer">
+          <span style="font-size:12px;color:var(--muted)">Gameplay Systems</span>
+          <span class="proj-arrow">→</span>
+        </div>
+      </div>
+    </a>
 
-		</div><!-- END COLORLIB-MAIN -->
-	</div><!-- END COLORLIB-PAGE -->
+    <!-- 2. DUNGEON ESCAPE -->
+    <a href="projects/dungeon-escape.html" class="proj-card" data-tags="ue5">
+      <div class="proj-thumb">
+        <img src="https://img.youtube.com/vi/UQnXwo2uUU0/maxresdefault.jpg" alt="Dungeon Escape">
+        <span class="engine-badge">UE5 · C++</span>
+      </div>
+      <div class="proj-body">
+        <div class="proj-title">Dungeon Escape — Inventory System</div>
+        <p class="proj-desc">First-person dungeon puzzle: collect keys stored in a personal inventory, place them at locked barriers in the right sequence to open the exit.</p>
+        <div class="tech-tags">
+          <span class="tech-tag">C++</span><span class="tech-tag">UE5</span><span class="tech-tag">Inventory</span><span class="tech-tag">Blueprints</span>
+        </div>
+        <div class="proj-footer">
+          <span style="font-size:12px;color:var(--muted)">Gameplay Systems</span>
+          <span class="proj-arrow">→</span>
+        </div>
+      </div>
+    </a>
 
-  <!-- loader -->
-  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+    <!-- 3. OVI OBSTACLE ASSAULT -->
+    <a href="projects/ovi-obby.html" class="proj-card" data-tags="ue5">
+      <div class="proj-thumb">
+        <img src="https://img.youtube.com/vi/q9ukWJTsvGQ/maxresdefault.jpg" alt="Ovi Obstacle Assault">
+        <span class="engine-badge">UE5 · C++</span>
+      </div>
+      <div class="proj-body">
+        <div class="proj-title">Ovi Obstacle Assault — Obby</div>
+        <p class="proj-desc">3D obstacle course where the player climbs through moving platforms. Focuses on transform manipulation, movement interpolation and looping timers — all in C++ with UE5's component system.</p>
+        <div class="tech-tags">
+          <span class="tech-tag">C++</span><span class="tech-tag">UE5</span><span class="tech-tag">Platform Motion</span><span class="tech-tag">Timers</span>
+        </div>
+        <div class="proj-footer">
+          <span style="font-size:12px;color:var(--muted)">Movement Systems</span>
+          <span class="proj-arrow">→</span>
+        </div>
+      </div>
+    </a>
 
-  <script src="js/jquery.min.js"></script>
-  <script src="js/jquery-migrate-3.0.1.min.js"></script>
-  <script src="js/popper.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/jquery.easing.1.3.js"></script>
-  <script src="js/jquery.waypoints.min.js"></script>
-  <script src="js/jquery.stellar.min.js"></script>
-  <script src="js/owl.carousel.min.js"></script>
-  <script src="js/jquery.magnific-popup.min.js"></script>
-  <script src="js/aos.js"></script>
-  <script src="js/jquery.animateNumber.min.js"></script>
-  <script src="js/bootstrap-datepicker.js"></script>
-  <script src="js/jquery.timepicker.min.js"></script>
-  <script src="js/scrollax.min.js"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
-  <script src="js/google-map.js"></script>
-  <script src="js/main.js"></script>
-    
-  </body>
+    <!-- 4. OPENGL RUBIK'S CUBE -->
+    <a href="projects/rubiks-cube.html" class="proj-card" data-tags="opengl">
+      <div class="proj-thumb">
+        <img src="images/cube.png" alt="OpenGL Rubik's Cube" onerror="this.style.background='#1c1c1c'">
+        <span class="engine-badge">OpenGL · C++</span>
+      </div>
+      <div class="proj-body">
+        <div class="proj-title">OpenGL — Interactive Rubik's Cube</div>
+        <p class="proj-desc">Real-time 3D Rubik's Cube with keyboard-driven face rotations, camera navigation, and seismic/shake animation. Focuses on transformations and orientation handling.</p>
+        <div class="tech-tags">
+          <span class="tech-tag">C++</span><span class="tech-tag">OpenGL</span><span class="tech-tag">GLSL</span><span class="tech-tag">3D Transforms</span>
+        </div>
+        <div class="proj-footer">
+          <span style="font-size:12px;color:var(--muted)">Computer Graphics</span>
+          <span class="proj-arrow">→</span>
+        </div>
+      </div>
+    </a>
+
+    <!-- 5. COLOR BUMP 3D -->
+    <a href="projects/color-bump.html" class="proj-card" data-tags="unity ai">
+      <div class="proj-thumb">
+        <img src="images/IHC.png" alt="Color Bump 3D" onerror="this.style.background='#1c1c1c'">
+        <span class="engine-badge">Unity · OpenCV</span>
+      </div>
+      <div class="proj-body">
+        <div class="proj-title">Color Bump 3D — CV Controls</div>
+        <p class="proj-desc">Multiplayer game with real-time Python + OpenCV. Player 1 moves the ball via head orientation tracking; Player 2 controls speed with hand gestures and audio input.</p>
+        <div class="tech-tags">
+          <span class="tech-tag">Unity</span><span class="tech-tag">Python</span><span class="tech-tag">OpenCV</span><span class="tech-tag">HCI</span>
+        </div>
+        <div class="proj-footer">
+          <span style="font-size:12px;color:var(--muted)">Computer Vision</span>
+          <span class="proj-arrow">→</span>
+        </div>
+      </div>
+    </a>
+
+    <!-- 6. OPERATION METAL LAB -->
+    <a href="projects/operation-metal-lab.html" class="proj-card" data-tags="unity">
+      <div class="proj-thumb">
+        <img src="images/itchio.png" alt="Operation Metal Lab" style="object-fit:contain;padding:1.5rem;background:#111">
+        <span class="engine-badge">Unity · itch.io</span>
+      </div>
+      <div class="proj-body">
+        <div class="proj-title">Operation Metal Lab</div>
+        <p class="proj-desc">Top-down tactical shooter with limited FOV. Infiltrate a lab, avoid enemies and cameras, collect keys, and advance through increasingly dangerous stages.</p>
+        <div class="tech-tags">
+          <span class="tech-tag">Unity</span><span class="tech-tag">C#</span><span class="tech-tag">Top-Down</span><span class="tech-tag">Published</span>
+        </div>
+        <div class="proj-footer">
+          <span style="font-size:12px;color:var(--accent)">▶ Play on itch.io</span>
+          <span class="proj-arrow">→</span>
+        </div>
+      </div>
+    </a>
+
+  </div>
+</div>
+
+<footer>
+  <p>R. Andre Cayro Cuadros &nbsp;·&nbsp; <a href="mailto:rodrigo.cayro@usp.br">rodrigo.cayro@usp.br</a> &nbsp;·&nbsp; <a href="https://github.com/rodrigocau" target="_blank">GitHub</a></p>
+</footer>
+
+<script>
+  document.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const filter = btn.dataset.filter;
+      document.querySelectorAll('.proj-card').forEach(card => {
+        const tags = card.dataset.tags || '';
+        card.style.display = (filter === 'all' || tags.includes(filter)) ? 'flex' : 'none';
+      });
+    });
+  });
+</script>
+</body>
 </html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Procedural Terrain Generation — Andre Cayro</title>
+  <link rel="stylesheet" href="../css/portfolio.css">
+
+<style>
+.proj-thumb-hero{position:relative;max-width:900px;margin:0 auto 3rem;padding:0 2rem}
+.proj-thumb-hero a{display:block;position:relative;border-radius:14px;overflow:hidden;cursor:pointer}
+.proj-thumb-hero img{width:100%;max-height:460px;object-fit:cover;display:block}
+.proj-thumb-hero .play{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:64px;height:64px;background:rgba(0,0,0,.72);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:26px;color:#fff;transition:background .2s}
+.proj-thumb-hero a:hover .play{background:var(--accent);color:#000}
+.proj-thumb-hero .eng{position:absolute;top:12px;right:12px;font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:500;background:rgba(0,0,0,.75);color:#f0f0f0;padding:3px 10px;border-radius:99px;border:1px solid rgba(255,255,255,.2)}
+</style>
+<style>
+.pth{position:relative;max-width:900px;margin:0 auto 3rem;padding:0 2rem}
+.pth a{display:block;position:relative;border-radius:14px;overflow:hidden}
+.pth img{width:100%;max-height:460px;object-fit:cover;display:block}
+.pth .pl{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:64px;height:64px;background:rgba(0,0,0,.72);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:26px;color:#fff;transition:background .2s;pointer-events:none}
+.pth a:hover .pl{background:var(--accent);color:#000}
+.pth .eb{position:absolute;top:12px;right:12px;font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:500;background:rgba(0,0,0,.75);color:#f0f0f0;padding:3px 10px;border-radius:99px;border:1px solid rgba(255,255,255,.2)}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="../index.html" class="nav-logo">ANDRE<span>.</span></a>
+  <ul class="nav-links">
+    <li><a href="../GameDev.html">Game Dev</a></li>
+    <li><a href="../NN.html">ML &amp; Neural Nets</a></li>
+    <li><a href="../Research.html">Research</a></li>
+  </ul>
+  <a href="mailto:rodrigo.cayro@usp.br" class="nav-cta">Hire Me</a>
+  <button class="nav-toggle" aria-label="Menu">☰</button>
+</nav>
+
+<div class="detail-hero">
+  <a href="../GameDev.html" class="back-link">← Back to Projects</a>
+
+  <div class="detail-badges">
+    <span class="conf-badge">⭐ MSc Thesis · USP 2023–Present</span>
+    <span class="conf-badge">CSCI 2024 · Las Vegas</span>
+    <span class="conf-badge">WiP 2025 · Salvador</span>
+  </div>
+
+  <h1 class="detail-title">Procedural Terrain Generation via Neural Style Transfer + Genetic Algorithms</h1>
+
+  <p class="detail-subtitle">
+    A complete GPU pipeline that combines deep convolutional neural networks with evolutionary computation to synthesize playable 3D terrain — with a custom fitness metric built around real-time NavMesh connectivity.
+  </p>
+
+  <div class="detail-links">
+    <a href="../papers/296.pdf" target="_blank" class="btn btn-accent">📄 Read WiP 2025 Paper</a>
+    <a href="../papers/simply.pdf" target="_blank" class="btn btn-outline">📄 Read CSCI 2024 Paper</a>
+    <a href="https://github.com/rodrigocau" target="_blank" class="btn btn-outline">⌥ GitHub</a>
+  </div>
+</div>
+
+<!-- VIDEO -->
+
+
+<!-- BODY -->
+
+<div style="max-width:900px;margin:0 auto 3rem;padding:0 2rem">
+  <iframe src="../papers/296.pdf" width="100%" height="580px" style="border:none;border-radius:14px;display:block;background:#000"></iframe>
+</div>
+
+<div class="detail-body">
+  <div class="detail-main">
+
+    <h3>The Problem</h3>
+    <p>
+      3D terrain generation for games typically relies on hand-crafted noise functions or artist-painted heightmaps. Neither scales well — noise lacks visual variety and artistic intent, while manual authoring doesn't scale to procedurally generated worlds. The goal of this thesis was to build a system that generates terrain that is both <strong style="color:var(--text)">visually compelling</strong> (aesthetics from a reference image) and <strong style="color:var(--text)">functionally playable</strong> (navigable by AI agents).
+    </p>
+
+    <h3>The Approach</h3>
+    <p>
+      The pipeline has three main stages:
+    </p>
+    <ul>
+      <li><strong style="color:var(--text)">Neural Style Transfer (NST):</strong> A pretrained VGG convolutional network extracts perceptual features from a style reference image. These features guide the terrain's visual character — rocky, mountainous, flat, eroded, etc.</li>
+      <li><strong style="color:var(--text)">Genetic Algorithm:</strong> A population of terrain candidates evolves over generations using a multi-objective fitness function. Elitism ensures the best solutions survive. Adaptive clamping and early stopping prevent overfitting.</li>
+      <li><strong style="color:var(--text)">NavMesh Fitness Metric:</strong> The key novel contribution. Each terrain candidate is baked into Unity's NavMesh at runtime and evaluated using a custom connectivity metric — measuring what fraction of the terrain surface is reachable by an AI agent. This makes "playability" a first-class optimization target.</li>
+    </ul>
+
+    <h3>Results</h3>
+    <p>
+      The system was validated across four terrain archetypes: Plateau, Ridge, River, and Plain. Each archetype was generated from a distinct style reference, and the NavMesh metric confirmed that all outputs maintained acceptable agent traversability while adopting the visual character of the reference image.
+    </p>
+    <ul>
+      <li>Successfully generated diverse terrain styles without manual heightmap authoring</li>
+      <li>NavMesh connectivity metric proved effective as a real-time playability signal</li>
+      <li>Multi-criteria fitness (SSIM + perceptual NST loss + navigability) produced stable convergence</li>
+      <li>Pipeline runs on GPU — generation of a full terrain takes seconds, not minutes</li>
+    </ul>
+
+    <h3>What Was Hard</h3>
+    <p>
+      Balancing visual fidelity and navigability was the central challenge. A terrain that looks exactly like a reference image might be a completely impassable cliff — and a perfectly flat, walkable terrain has no visual character. The multi-criteria fitness function required careful tuning of weights between the SSIM metric, the NST perceptual loss, and the NavMesh score. Early stopping was critical to prevent the genetic algorithm from collapsing into local optima that maximized one signal at the cost of others.
+    </p>
+    <p>
+      The real-time NavMesh baking in Unity was also non-trivial — standard baking is an async editor-time operation and had to be restructured for synchronous runtime evaluation inside the genetic algorithm loop.
+    </p>
+
+  </div>
+
+  <div class="detail-sidebar">
+    <div class="sidebar-card">
+      <div class="sidebar-label">Tech Stack</div>
+      <div class="sidebar-items">
+        <span class="tech-tag">Python</span>
+        <span class="tech-tag">Unity C#</span>
+        <span class="tech-tag">PyTorch</span>
+        <span class="tech-tag">GPU / CUDA</span>
+        <span class="tech-tag">Neural Style Transfer</span>
+        <span class="tech-tag">Genetic Algorithms</span>
+        <span class="tech-tag">NavMesh</span>
+        <span class="tech-tag">SSIM</span>
+        <span class="tech-tag">NumPy</span>
+        <span class="tech-tag">Matplotlib</span>
+      </div>
+    </div>
+
+    <div class="sidebar-card">
+      <div class="sidebar-label">Category</div>
+      <div class="sidebar-items">
+        <span class="tech-tag">MSc Thesis</span>
+        <span class="tech-tag">Procedural Generation</span>
+        <span class="tech-tag">AI / ML</span>
+        <span class="tech-tag">Game Dev Research</span>
+      </div>
+    </div>
+
+    <div class="sidebar-card">
+      <div class="sidebar-label">Publications</div>
+      <div style="display:flex;flex-direction:column;gap:8px">
+        <a href="../papers/simply.pdf" target="_blank" style="font-size:12px;color:var(--accent)">📄 CSCI 2024 — Las Vegas →</a>
+        <a href="../papers/296.pdf" target="_blank" style="font-size:12px;color:var(--accent)">📄 WiP 2025 — Salvador →</a>
+      </div>
+    </div>
+
+    <div class="sidebar-card">
+      <div class="sidebar-label">Institution</div>
+      <p style="font-size:13px;color:var(--muted)">Instituto de Matemática e Ciências de Computação (ICMC) — Universidade de São Paulo, São Carlos, Brazil</p>
+    </div>
+  </div>
+</div>
+
+<hr class="section-divider">
+<div style="text-align:center;padding:2.5rem 2rem">
+  <p style="font-size:14px;color:var(--muted);margin-bottom:1rem">Want to know more about this project?</p>
+  <a href="mailto:rodrigo.cayro@usp.br" class="btn btn-accent">Get in Touch →</a>
+</div>
+
+<footer>
+  <p>R. Andre Cayro Cuadros &nbsp;·&nbsp; <a href="mailto:rodrigo.cayro@usp.br">rodrigo.cayro@usp.br</a> &nbsp;·&nbsp; <a href="https://github.com/rodrigocau" target="_blank">GitHub</a></p>
+</footer>
+
+</body>
+</html>
