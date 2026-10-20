@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dark Rally — Andre Cayro</title>
+  <meta name="description" content="Game Physics Engineer on Dark Rally (PLOP! Studio, Steam) — deterministic vehicle physics with Unity and Photon Quantum.">
+  <link rel="stylesheet" href="../css/portfolio.css">
+<style>
+.dr-cover{max-width:900px;margin:0 auto 1rem;padding:0 2rem}
+.dr-cover img{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:14px;border:1px solid var(--border)}
+.dr-gallery{max-width:900px;margin:0 auto 3rem;padding:0 2rem;display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.dr-gallery a{display:block;border-radius:10px;overflow:hidden;border:1px solid var(--border);transition:border-color .2s}
+.dr-gallery a:hover{border-color:var(--accent)}
+.dr-gallery img{width:100%;aspect-ratio:16/9;object-fit:cover;opacity:.85;transition:opacity .2s}
+.dr-gallery a:hover img{opacity:1}
+.dr-credit{font-size:11px;color:var(--muted2);margin-top:.5rem}
+@media (max-width:768px){.dr-gallery{grid-template-columns:repeat(2,1fr)}}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="../index.html" class="nav-logo">ANDRE<span>.</span></a>
+  <ul class="nav-links">
+    <li><a href="../GameDev.html" class="active">Game Dev</a></li>
+    <li><a href="../NN.html">ML &amp; Neural Nets</a></li>
+    <li><a href="../Research.html">Research</a></li>
+  </ul>
+  <a href="mailto:rodrigo.cayro@usp.br" class="nav-cta">Hire Me</a>
+  <button class="nav-toggle" aria-label="Menu">☰</button>
+</nav>
+
+<div class="detail-hero">
+  <a href="../GameDev.html" class="back-link">← Back to Projects</a>
+  <div class="detail-badges">
+    <span class="conf-badge">Shipped on Steam</span>
+    <span class="conf-badge">Unity · Photon Quantum</span>
+    <span class="conf-badge">Game Physics Engineer</span>
+  </div>
+  <h1 class="detail-title">Dark Rally — Deterministic Vehicle Physics</h1>
+  <p class="detail-subtitle">
+    Off-road MMO racing game for PC and mobile by PLOP! Studio, released on Steam in December 2025. I joined in July 2026 as Game Physics Engineer, working on vehicle physics and gameplay on top of Unity and Photon Quantum's deterministic ECS, and I'm credited on the title.
+  </p>
+  <div class="detail-links">
+    <a href="https://store.steampowered.com/app/3285870/Dark_Rally/" target="_blank" rel="noopener" class="btn btn-accent">View on Steam →</a>
+  </div>
+</div>
+
+<div class="dr-cover">
+  <img id="dr-main" src="../images/dark-rally/dr-buggy-dust.jpg" alt="Dark Rally — buggy racing through a dusty mountain stage">
+</div>
+<div class="dr-gallery">
+  <a href="../images/dark-rally/dr-buggy-dust.jpg"><img src="../images/dark-rally/dr-buggy-dust.jpg" alt="Buggy on a dusty mountain stage"></a>
+  <a href="../images/dark-rally/dr-motorbike.jpg"><img src="../images/dark-rally/dr-motorbike.jpg" alt="Two-wheel motorbike on dirt"></a>
+  <a href="../images/dark-rally/dr-beach.jpg"><img src="../images/dark-rally/dr-beach.jpg" alt="Racing on sand near water"></a>
+  <a href="../images/dark-rally/dr-canyon.jpg"><img src="../images/dark-rally/dr-canyon.jpg" alt="Canyon stage"></a>
+  <p class="dr-credit" style="grid-column:1/-1">Screenshots: Dark Rally Steam store page © PLOP Studio.</p>
+</div>
+
+<div class="detail-body">
+  <div class="detail-main">
+    <h3>Overview</h3>
+    <p>Dark Rally is a multiplayer off-road racer with bikes, quads, cars, side-by-sides and trucks. Its simulation runs on Photon Quantum, a deterministic, fixed-point ECS where every client must compute exactly the same frame. My job is to analyze, propose and ship improvements to vehicle physics and gameplay without breaking that determinism.</p>
+
+    <h3>Determinism &amp; Desync Fixes</h3>
+    <ul>
+      <li>Found shared state that broke simulation determinism: gameplay fields living in prefabs and static variables</li>
+      <li>Moved that state into Quantum Frame components so it is rolled back and predicted correctly</li>
+      <li>Converted floating-point math to fixed-point (FP), removing a source of client desynchronization</li>
+    </ul>
+
+    <h3>Vehicle Physics</h3>
+    <ul>
+      <li>Surface-dependent friction (asphalt, dirt, sand, water) via PhysicsMaterial in the Quantum DSL</li>
+      <li>Speed-dependent grip, nitro ramp-up and asymmetric suspension damping</li>
+      <li>Two-wheel vehicle physics with a custom rollover-recovery system</li>
+      <li>Two-wheel behaviour isolated behind a flag so four-wheel vehicles stay untouched</li>
+    </ul>
+
+    <h3>What I Learned</h3>
+    <p>Working in a deterministic rollback framework changes how you write gameplay code: every value that affects the simulation has to live in the frame, use fixed-point math and be reproducible bit for bit. Tuning feel (grip, suspension, nitro) inside those constraints, on a live multiplatform game, has been the core of this role.</p>
+  </div>
+
+  <div class="detail-sidebar">
+    <div class="sidebar-card">
+      <div class="sidebar-label">Role</div>
+      <p style="font-size:13px;color:var(--text);font-weight:600">Game Physics Engineer</p>
+      <p style="font-size:12px;color:var(--muted)">PLOP! Studio Gráfico S.R.L. · Lima, Peru (Remote)<br>Jul 2026 – Present</p>
+    </div>
+    <div class="sidebar-card">
+      <div class="sidebar-label">Tech Stack</div>
+      <div class="sidebar-items">
+        <span class="tech-tag">Unity</span>
+        <span class="tech-tag">C#</span>
+        <span class="tech-tag">Photon Quantum</span>
+        <span class="tech-tag">Deterministic ECS</span>
+        <span class="tech-tag">Fixed-Point Math</span>
+        <span class="tech-tag">Quantum DSL</span>
+        <span class="tech-tag">Vehicle Physics</span>
+      </div>
+    </div>
+    <div class="sidebar-card">
+      <div class="sidebar-label">Game</div>
+      <div class="sidebar-items">
+        <span class="tech-tag">Racing</span>
+        <span class="tech-tag">Multiplayer</span>
+        <span class="tech-tag">PC / Mobile</span>
+        <span class="tech-tag">Steam · Dec 2025</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <p>R. Andre Cayro Cuadros &nbsp;·&nbsp; <a href="mailto:rodrigo.cayro@usp.br">rodrigo.cayro@usp.br</a> &nbsp;·&nbsp; <a href="https://github.com/rodrigocau" target="_blank">GitHub</a></p>
+</footer>
+
+<script>
+document.querySelectorAll('.dr-gallery a').forEach(a => a.addEventListener('click', e => {
+  e.preventDefault();
+  const main = document.getElementById('dr-main');
+  main.src = a.getAttribute('href');
+  main.alt = a.querySelector('img').alt;
+}));
+</script>
+</body>
+</html>

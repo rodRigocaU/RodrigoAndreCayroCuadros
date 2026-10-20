@@ -147,7 +147,7 @@ nav {
   transition: .2s;
 }
 .filter-btn:hover, .filter-btn.active { background: var(--accent); color: #000; border-color: var(--accent); }
-.proj-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px,1fr)); gap: 16px; }
+.proj-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(300px,100%),1fr)); gap: 16px; }
 .proj-card {
   background: var(--surface); border: 1px solid var(--border);
   border-radius: var(--radius-lg); overflow: hidden;
@@ -225,6 +225,20 @@ nav {
 .sidebar-label { font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--accent); letter-spacing: .1em; text-transform: uppercase; margin-bottom: .75rem; }
 .sidebar-items { display: flex; flex-wrap: wrap; gap: 6px; }
 
+/* ── SHOT STRIP ── */
+.shot-strip { display: grid; grid-template-columns: repeat(3,1fr); gap: 12px; margin-top: 12px; }
+.shot-strip img { width: 100%; aspect-ratio: 16/9; object-fit: cover; border-radius: var(--radius-lg); border: 1px solid var(--border); }
+
+/* ── TIMELINE ── */
+.timeline { display: flex; flex-direction: column; border-left: 1px solid var(--border); margin-left: 6px; }
+.tl-item { position: relative; display: grid; grid-template-columns: 150px 1fr; gap: 1.5rem; padding: 0 0 1.75rem 1.5rem; }
+.tl-item::before { content: ''; position: absolute; left: -5px; top: 7px; width: 9px; height: 9px; border-radius: 50%; background: var(--accent); }
+.tl-item:last-child { padding-bottom: 0; }
+.tl-date { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--accent); padding-top: 2px; }
+.tl-role { font-size: 15px; font-weight: 600; }
+.tl-org { font-size: 12px; color: var(--muted); margin-bottom: .35rem; }
+.tl-desc { font-size: 13px; color: var(--muted); line-height: 1.65; }
+
 /* ── FOOTER ── */
 footer { border-top: 1px solid var(--border); padding: 2rem; text-align: center; }
 footer p { font-size: 12px; color: var(--muted2); }
@@ -243,4 +257,7 @@ footer a:hover { color: var(--accent); }
   .nav-links { display: none; }
   .nav-toggle { display: block; }
   .section { padding: 3rem 1.5rem; }
+  .shot-strip { grid-template-columns: 1fr 1fr; }
+  .shot-strip img:nth-child(3) { display: none; }
+  .tl-item { grid-template-columns: 1fr; gap: .25rem; }
 }
